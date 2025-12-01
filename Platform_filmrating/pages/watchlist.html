@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CINERATE - Watchlist</title>
+
+  <!-- Reusable Navbar CSS -->
+  <link rel="stylesheet" href="../assets/style/navbar.css" />
+  <!-- Watchlist CSS -->
+  <link rel="stylesheet" href="../assets/style/watchlist.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="ui.html">
+      <img src="../assets/image/logo.png" alt="CINERATE Logo">
+    </a>
+  </div>
+
+  <div class="menu-container">
+    <button class="menu-btn">☰</button>
+    <ul class="menu-dropdown">
+      <li><a href="../pages/ui.html">Home</a></li>
+      <li><a href="profile.php">My Profile</a></li>
+      <li><a href="watchlist.html">Watchlist</a></li>
+      <li><a href="../index.html">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- WATCHLIST SECTION -->
+<section class="watchlist-section">
+  <h1>My Watchlist</h1>
+  <div class="watchlist-container" id="watchlistContainer">
+    <p id="emptyMessage" class="empty-message">Your watchlist is empty.</p>
+    <!-- Movies will populate here dynamically -->
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="../js/navbar.js"></script>
+<script src="../js/watchlist.js"></script>
+</body>
+</html>

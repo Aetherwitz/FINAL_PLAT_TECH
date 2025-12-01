@@ -1,0 +1,189 @@
+/* -------------------- PROFILE PAGE -------------------- */
+.profile-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  font-family: 'Segoe UI', sans-serif;
+   margin-top: 120px
+}
+
+.profile-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+/* -------------------- PROFILE INFO -------------------- */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  background-color: #1f1f1f;
+  padding: 20px 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.info-box:hover {
+  background-color: #292929;
+}
+
+.info-box label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.info-box span {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* -------------------- CHANGE PASSWORD FORM -------------------- */
+.change-password {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  background-color: #1f1f1f;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.change-password h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+.change-password label {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.change-password input {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: outline 0.3s;
+}
+
+.change-password input:focus {
+  outline: 2px solid #e50914;
+}
+
+.change-password button {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #e50914;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.change-password button:hover {
+  background-color: #ff1b24;
+}
+
+/* -------------------- OTHER PROFILE OPTIONS -------------------- */
+.profile-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.profile-options .info-box {
+  justify-content: space-between;
+}
+
+.profile-options .btn {
+  background-color: #e50914;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.profile-options .btn:hover {
+  background-color: #ff1b24;
+}
+
+/* -------------------- ALERT MESSAGES -------------------- */
+.alert {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.alert.success {
+  background-color: #1f4436;
+  color: #a8ffd1;
+}
+
+.alert.error {
+  background-color: #661111;
+  color: #ffbaba;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 20px;
+  }
+
+  .info-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .change-password {
+    gap: 12px;
+  }
+
+  .profile-options {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .change-password h2 {
+    font-size: 1.3rem;
+  }
+
+  .change-password input,
+  .change-password button,
+  .profile-options .btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}

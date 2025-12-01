@@ -1,0 +1,121 @@
+/* Reset */
+* { box-sizing: border-box; margin:0; padding:0; font-family: Arial, sans-serif; }
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img { height: 60px; width: auto; }
+
+/* WATCHLIST SECTION */
+.watchlist-section {
+  padding: 40px 20px;
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.watchlist-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Grid container */
+.watchlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Empty message */
+.empty-message {
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Individual movie box */
+.movie-box {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 220px;
+}
+
+.movie-box img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #333;
+  object-fit: cover;
+  height: 250px;
+}
+
+.movie-box h3 { font-size: 1.1rem; margin: 10px 0 5px; color: #fff; }
+.movie-box p { font-size: 0.9rem; color: #aaa; margin-bottom: 5px; }
+
+.box-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.remove-btn, .wiki-btn {
+  padding: 6px 12px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.remove-btn {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background-color: #ff1b24;
+}
+
+.wiki-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+.wiki-btn:hover {
+  background-color: #555;
+}
+
+.movie-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .watchlist-container { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+  .movie-box img { height: 200px; }
+}
+
+@media (max-width: 480px) {
+  .watchlist-section h1 { font-size: 2em; }
+  .movie-box img { height: 160px; }
+  .remove-btn, .wiki-btn { padding: 4px 10px; font-size: 0.85rem; }
+}
